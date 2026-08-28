@@ -12,6 +12,13 @@ aus dem Bestand unter https://www.rechtsanwaelte-voelkel-kollegen.de/
 Die Referenz ist ein proprietäres System der OMERGY GmbH. Es gibt kein Theme und
 kein Template zum Übernehmen — der Nachbau ist Handarbeit.
 
+**Auftragslage:** Die Seite ist bislang **nicht beauftragt**. Sie entsteht auf
+eigene Initiative neben einem laufenden Projekt für den Sohn des Kanzleiinhabers
+und soll ihm anschließend zum Kauf angeboten werden. Daraus folgt: Das Ergebnis
+muss ohne Nachfragen beim Inhaber überzeugen, und alles, wofür wir noch keine
+Freigabe haben (Foto, Titelangaben, Werbeaussagen), wird als solches markiert
+statt stillschweigend gesetzt.
+
 ## Arbeitsweise
 
 - **Erst planen, dann bauen.** Bei jeder neuen Aufgabe zuerst den Plan zeigen und
@@ -23,6 +30,41 @@ kein Template zum Übernehmen — der Nachbau ist Handarbeit.
   fehlt, `TODO:` mit Beschreibung setzen und melden.
 - Keine erfundenen Fakten über die Kanzlei. Zahlen, Titel, Qualifikationen und
   Rechtsgebiete ausschließlich aus BRIEFING.md.
+
+## Designtreue — der wichtigste Punkt
+
+Das Ergebnis soll **visuell identisch** zur Referenz sein, nicht „im Stil von".
+Kein freies Nachempfinden, kein generisches Framework-Look, keine eigenen
+Designideen. Wenn ein Wert unklar ist, wird er **im Referenz-CSS nachgeschlagen,
+nicht geschätzt**.
+
+Deshalb wird vor dem ersten Bauschritt der komplette Frontend-Code der Referenz
+gespiegelt und ausgewertet. Aus dem CSS werden exakt übernommen:
+
+- Farbwerte (Hex/RGB), inklusive Hover- und Fokuszustände
+- Schriftarten, Herkunft der Fonts, Schnitte, Größen, Zeilenhöhen,
+  Letter-Spacing, Font-Weights je Element
+- Abstände: Paddings, Margins, Container-Breiten, Grid-/Flex-Setup, Gaps
+- Breakpoints und was an jedem umbricht
+- Border-Radien, Schatten, Rahmen, Übergänge, Animationsdauern
+- Button- und Formularstyles
+- Icons: Herkunft und Darstellung
+
+Diese Werte kommen zuerst in eine zentrale Token-Datei (CSS Custom Properties),
+erst danach wird die erste Sektion gebaut. Ziel ist, dass wir **nicht** Sektion für
+Sektion nachträglich Abweichungen wegprompten müssen.
+
+Wenn ein Detail im Code nicht auffindbar ist: melden, nicht erfinden.
+
+**Vorrangregel:** Bei jedem Konflikt zwischen diesem Abschnitt und den
+Konventionen weiter unten gewinnt die Designtreue. Die Konventionen gelten dort,
+wo sie das visuelle Ergebnis nicht verändern. Betrifft konkret „Mobile first":
+wenn die Referenz getrennte Desktop-/Mobile-Blöcke im DOM verwendet, bauen wir
+das nach, statt es responsiv umzuschreiben.
+
+Rechtlich sauber trennen: **Struktur und Optik** werden übernommen, **Texte**
+werden neu geschrieben (siehe unten). Fremde Bilder und lizenzpflichtige
+Schriften werden nicht mitgenommen, sondern ersetzt bzw. korrekt lizenziert.
 
 ## Texte
 
@@ -89,3 +131,4 @@ fremde Inhalte werden nicht mitversioniert.
 - Auf der Live-Seite des Bestands ist ein Logout-Link zum IONOS-Editor sichtbar —
   prüfen, ob dort eine Session offen liegt
 - Redirects für die alten URLs planen
+
