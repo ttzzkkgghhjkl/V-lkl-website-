@@ -140,8 +140,20 @@ Generator-Meta, ob ein JS-Framework geladen wird.
   entscheiden, ob wir sie nachbauen (A/B, kampagnenabhängig) oder weglassen.
 
 ### Sektion 5 — „Welches Anliegen haben Sie?" (Leistungskacheln)
-Referenz: 3 Kacheln, je Bild oben, H3, darunter 2–4 Stichpunkte. Für Völkel
-4 Kacheln, weil vier Rechtsgebiete:
+Referenz: 3 Kacheln, je Bild oben, H3, darunter 2–4 Stichpunkte.
+
+**Feste Vorgabe: vier Kacheln.** Völkel hat vier Rechtsgebiete, die alle sichtbar
+sein müssen. Das ist eine bewusste, nicht verhandelbare Abweichung von der
+Referenz und der einzige Punkt, an dem die Struktur abweicht.
+
+Dabei gilt: Die **Kachel selbst bleibt exakt wie in der Referenz** — Bildformat,
+Überschriftenstil, Stichpunktdarstellung, Innenabstände, Radien, Schatten,
+Hover-Verhalten. Geändert wird ausschließlich die Spaltenzahl des Grids.
+
+Wie das Grid gelöst wird, ist **nach der CSS-Analyse zu entscheiden**, nicht
+vorher zu raten. Zwei Kandidaten: 2×2 auf Desktop, oder vier in einer Reihe mit
+angepassten Breakpoints. Ausschlaggebend ist, welche Variante der Referenzoptik
+näher bleibt. Vorschlag zur Freigabe vorlegen, bevor gebaut wird.
 
 - **Arbeitsrecht** — Kündigungsschutzklage, Abfindungsverhandlung,
   Aufhebungsvertrag, Zeugnis
